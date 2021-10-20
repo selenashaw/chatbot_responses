@@ -1,6 +1,565 @@
 {
   "courselink":"https://www.cs.princeton.edu/courses/archive/fall21/cos126/",
   "assignments": {
-    
+    "Hello World": {
+      "LINK": "assignments/hello/",
+      "HelloWorld": {
+        "1": {
+          "description":"Check output format.",
+          "hint": ""
+        },
+        "2": {
+          "description":"Check correctness.",
+          "hint": ""
+        }
+      },
+      "GreatCircle": {
+        "0a": {
+          "description":"Check formatting of inputs from assignment specification.",
+          "hint": ""
+        },
+        "0b": {
+          "description":"Check correctness of inputs from assignment specification.",
+          "hint": ""
+        },
+        "1": {
+          "description":"Fixed inputs.",
+          "hint": ""
+        },
+        "2": {
+          "description":"Corner cases.",
+          "hint": ""
+        },
+        "3" :{
+          "description":"Random Inputs.",
+          "hint": ""
+        },
+        "4": {
+          "description":"Check that results for (x1, y1, x2, y2) and (x2, y2, x1, y2) are equal.",
+          "hint": ""
+        }
+      },
+      "RGBtoCMYK": {
+        "0a": {
+          "description":"Check formatting of inputs from assignment specification.",
+          "hint": ""
+        },
+        "0b": {
+          "description":"Check correctness of inputs from assignment specification.",
+          "hint": ""
+        },
+        "1": {
+          "description":"Various inputs.",
+          "hint": ""
+        },
+        "2": {
+          "description":"Corner cases.",
+          "hint": ""
+        },
+        "3": {
+          "description":"Random inputs.",
+          "hint": ""
+        }
+      },
+      "HiFour": {
+        "0a": {
+          "description":"Check formatting of inputs from assignment specification.",
+          "hint": ""
+        },
+        "0b": {
+          "description":"Check correctness of inputs from assignment specification.",
+          "hint": ""
+        },
+        "1": {
+          "description":"Various names.",
+          "hint":""
+        },
+        "2": {
+          "description":"All the same name.",
+          "hint":""
+        },
+        "3": {
+          "description":"Command-line arguments are the same as their reverse.",
+          "hint":""
+        },
+        "4": {
+          "description":"All permutations of four names.",
+          "hint":""
+        }
+      },
+      "Ordered": {
+        "0a": {
+          "description":"Check formatting of inputs from assignment specification.",
+          "hint": ""
+        },
+        "0b": {
+          "description":"Check correctness of inputs from assignment specification.",
+          "hint": ""
+        },
+        "1": {
+          "description":"Inputs that are strictly ascending.",
+          "hint":""
+        },
+        "2": {
+          "description":"Inputs that are strictly descending.",
+          "hint":""
+        },
+        "3": {
+          "description":"Inputs that are neither strictly ascending nor descending.",
+          "hint":""
+        },
+        "4": {
+          "description":"Inputs with duplicate values.",
+          "hint":""
+        },
+        "5": {
+          "description":"Corner cases.",
+          "hint":""
+        },
+        "6": {
+          "description":"Random inputs with distinct values.",
+          "hint":""
+        },
+        "7": {
+          "description":"Random inputs with duplicate values.",
+          "hint":""
+        },
+        "8": {
+          "description":"Random inputs susceptible to integer overflow.",
+          "hint":""
+        }
+      }
+    },
+    "Loops & Conditionals": {
+      "LINK": "assignments/loops/",
+      "NoonSnooze": {
+        "0a": {
+          "description":"Check formatting of inputs from assignment specification.",
+          "hint":"This test checks various formatting issues (not in format XX:YYam/pm, missing two digits for minutes etc.). See following tests for more details. Check main() in NoonSnooze for incorrect formatting in print statements, or faulty logic in conditionals for corner cases."
+        },
+        "0b": {
+          "description":"Check correctness of inputs from assignment specification.",
+          "hint":"This test checks various formatting issues (not in format XX:YYam/pm, missing two digits for minutes etc.). See following tests for more details. Check main() in NoonSnooze for incorrect formatting in print statements, or faulty logic in conditionals for corner cases."
+        },
+        "1" : {
+          "description":"Inputs between 0 and 12 hours.",
+          "hint":"Checks pm correctness. Possible errors include having 0:10pm instead of 12:51pm, incorrectly reasoning about am and pm, etc. Check conditionals in the main() method of NoonSnooze pertaining to pm and the edge case of hours being a multiple of 12."
+        },
+        "2": {
+          "description":"Inputs between 12 and 13 hours.",
+          "hint":"Checks 12:XXam correctness (the transition between pm and am). Check conditionals in the main method of NoonSnooze pertaining the case where snooze / 60 % 24 == 12 (hours are between 12 and 13)."
+        },
+        "3": {
+          "description":"Inputs between 13 and 24 hours.",
+          "hint":"Checks am correctness. Possible errors include having 0:10am instead of 12:51am, incorrectly reasoning about am and pm, etc. Check conditionals in the main method of NoonSnooze pertaining to am and the edge case of hours being a multiple of 12."
+        },
+        "4": {
+          "description":"Inputs between 24 and 25 hours.",
+          "hint":"Checks 12:XXpm correctness (the transition between am and pm). Errors may include improperly using am vs. pm or printing 0:XXpm instead of 12:XXpm (not considering that multiple of 24 % 24 is 0 but we want 0 to be 12 on the clock). Check conditionals in the main method of NoonSnooze pertaining the case where snooze / 60 % 24 == 0 (hours are between 24 and 25)."
+        },
+        "5": {
+          "description":"Inputs between 25 and 48 hours.",
+          "hint":"Checks correctness for inputs beyond one day. Checks modular logic. Look in the main method of NoonSnooze for possible errors with using % (i.e. not using % 24)."
+        },
+        "6": {
+          "description":"Inputs whose number of minutes is less than 10.",
+          "hint":"Checks that the student properly checked and accounted for the edge case where minutes is less than 10. The student should have printed an extra 0 before printing minutes to ensure a format of XX:YYam/pm instead of printing something like 12:3pm. Look in the main method of NoonSnooze for a missing conditional check."
+        },
+        "7": {
+          "description":"Corner cases.",
+          "hint":"Checks 12:00am/12:00pm various cases, testing the logic of transition between am and pm, and formatting of snooze / 60 % 24 = 0 cases (should be 12:00pm).\nWhen snooze / 60 % 24 >= 12, should switch to am, then back when 0. Check conditionals in main of NoonSnooze pertaining to cases of the hour being a multiple of 12."
+        },
+        "8": {
+          "description":"Random inputs.",
+          "hint":"Stress testing (if this is failing it likely is being more specifically tested somewhere else -- refer to previous tests)."
+        }     
+      },
+      "Random Walkers": {
+        "0a": {
+          "description":"Check formatting of inputs from assignment specification.",
+          "hint":"Checks that the student formats output correctly. Should be \"mean squared distance = <double>\". If this fails, check the formatting of the final print statement in the main method of RandomWalkers for typos."
+        },
+        "0b": {
+          "description":"Check mean squared distance of inputs from assignment specification.",
+          "hint":"This test tests that the student solution falls in the expected range of solutions. Failure in this test suggest some major calculation error while calculating the mean. Possible errors include not resetting values that need to be reset for each trial (or alternatively resetting the total sum after each trial when it should accumulate). Check calculations in the trial loop of the main method of RandomWalkers, especially how the student handles accumulating the results of many trials."
+        },
+        "1": {
+          "description":"Check mean squared distance.",
+          "hint":"This test tests that the student solution falls in the expected range of solutions. Failure in this test suggest some major calculation error while calculating the mean. Possible errors include not resetting values that need to be reset for each trial (or alternatively resetting the total sum after each trial when it should accumulate). Check calculations in the trial loop of the main method of RandomWalkers, especially how the student handles accumulating the results of many trials."
+        },
+        "2": {
+          "description":"Check mean squared distance when n = trials.",
+          "hint":"This test tests that the student solution falls in the expected range of solutions. Failure in this test suggest some major calculation error while calculating the mean. Possible errors include not resetting values that need to be reset for each trial (or alternatively resetting the total sum after each trial when it should accumulate). Check calculations in the trial loop of the main method of RandomWalkers, especially how the student handles accumulating the results of many trials."
+        },
+        "3": {
+          "description":"Check mean squared distance when n = 0.",
+          "hint":"Checks that for 0 steps, the mean squared distance outputted is zero. If this fails, check the inner loop logic in the main method of RandomWalkers for an off-by-one error."
+        },
+        "4": {
+          "description":"Check that mean squared distance is not always an integer.",
+          "hint":"As the mean squared distance is the sum of the squared distances divided by the number of trials, it shouldn't always be an integer. If this fails, check the calculation of the mean after the loop in the main method of RandomWalkers for a casting/integer calculation issue."
+        },
+        "5": {
+          "description":"Check that program produces different result each time.",
+          "hint":"The walks are random so the outputs should not be the same each time. If this fails, check that the student has not hard-coded some values in the trial loop of their main method in RandomWalkers."
+        },
+        "6":{
+          "description":"Check randomness of mean squared distances when trials = 1.",
+          "hint":"Similar to the above tests, checks that the walks are uniformly random as expected when the number of trials is one. (More like checking the randomness of awalk itself, similar to test 8 in RandomWalker.) If this fails, check previous tests.\nIf all other tests pass but this fails, it is possible there is an off-by-one error in the trials loop of the main method of RandomWalkers. If the student runs two trials when trials = 1 accidentally, the randomness of the outputs will be greatly reduced as each output is an average of two walks, not a single random walk as expected."
+        }
+      },
+      "RollDice": {
+        "0": {
+          "description":"Check formatting for input from assignment specification.",
+          "hint":"Tests that the program correctly prints a histogram (should be numbers from 10 to 60 at the beginning of the line with a colon afterwards, and then a histogram made of asterisks -- this test only tests formatting, see Test 1 for a check of the range failing). If this fails, check the correctness (formatting, bounds) of the second set of loops in the main method of RollDice (after the testing has been done) that is used for printing the histogram."
+        },
+        "1": {
+          "description":"Check range of indices in histogram.",
+          "hint":"Checks to see if the histogram contains entries for 10-60, the possible sums of 10 rolls of a die. If this fails, check the logic of second set of loops (after testing is done) in the main method of RollDice used for printing the histogram."
+        },
+        "2a": {
+          "description":"Check number of asterisks printed.",
+          "hint":"Checks that in total the number of asterisks in the histogram equals the number of tests run (each asterisk represents the results of one test). If this fails, first check the bounds of the testing loop (first outer loop in the main method of RollDice) to ensure that all tests are being run,, as well as how the results are being stored (if some data is lost here it will not be printed). Then, check the inner loop of the second set of loops to see that all the asterisks of a certain result are printed."
+        },
+        "2b": {
+          "description":"Check number of asterisks printed when Math.random() always returns the same value.",
+          "hint":"Piles all results in one bucket of the histogram and checks correctness. Possible ways the student may fail this test is incorrect logic about storing results in an array indexed by the result in the main method of RollDice. If this is true, they likely also failed the following tests about random distribution in many runs.\nAn example - a student stored results in arrsum (so was using indices 10,60, but then incorrectly set the bounds of the printing loop as int i = 9 to i < 60, likely mimicking how we often use for loops starting from i = 0 for iterating through arrays. When they tried to print asterisks for sum, the printed asterisks less than arrsum-1 which was zero, so they did not print any. They also failed most of the following tests about distribution."
+        },
+        "3": {
+          "description":"Check mean for sum of ten dice.",
+          "hint":"Checks that the tests are consistent with what we expect from random dice rolls. If this fails, see Test 2b for a possible error. Otherwise, check the calculation surrounding Math.random() in main of RollDice, as well as whether all results are being properly stored and outputted."
+        },
+        "4": {
+          "description":"Check that program produces different histogram each time.",
+          "hint":"Checks that the histogram is not deterministic. As random numbers are generated, the results should not be the same each time. Unlikely to fail, but if it does the student may have hard-coded results instead of running tests with random numbers."
+        },
+        "5": {
+          "description":"Corner cases.",
+          "hint":"Checks cases where tests are 0 and 1. If this fails, check the logic of the first outer loop in the main of RollDice for incorrect bounds checking/handling of tests < 2."
+        },
+        "6": {
+          "description":"Check randomness for sum of ten dice.",
+          "hint":"If this fails, there is likely some other issue causing improper outputs. Check the previous tests for more possibilities. (Possibly see test 2b)"
+        },
+        "7": {
+          "description":"Check randomness for sum of ten dice.",
+          "hint":"If this fails, there is likely some other issue causing improper outputs. Check the previous tests for more possibilities. (Possibly see test 2b)"
+        }
+      },
+      "Random Walker": {
+        "0a": {
+          "description":"Check formatting of inputs from assignment specification.",
+          "hint":"Checks that the number of lines printed is correct, and that the final print statement giving the mean squared distance is formatted correctly. If there is an issue with the formatting of the print statement, check the final print statement in the main method of RandomWalker for formatting or logic errors (not parenthesizing calculations etc.). If there is an incorrect number of lines, see tests 0b and 1, this may be caused by not printing the starting or ending point. Check that the student prints the origin before entering the loop, or handles both the start and the end in some way."
+        },
+        "0b": {
+          "description":"Check correctness of inputs from assignment specification.",
+          "hint":"Checks that the inputs outputted are correct (start at the origin, mean squared distance reported by student is consistent with points printed, etc.) If the student does not start at the origin, check before and at the beginning of the loop in the main method of RandomWalker to see if the student prints before taking any steps (also see test 1). If the mean squared distance is not correct, check where the calculation is done near the end of the main method (before or in the final print statement). (If there was a formatting error also i.e. distance being 09 instead of an integer, this may be a concatenation/calculation problem with parentheses.)"
+        },
+        "1": {
+          "description":"Check number of steps in random walk.",
+          "hint":"Checks that the student takes the proper number of steps based on the argument. Check the bounds of the loop in main of RandomWalker, as well as check that both the starting point and the ending point are printed (one of these will have to be handled outside the loop most likely). See test 2 for the case of the starting point (should be the origin) not being printed."
+        },
+        "2": {
+          "description":"Check that first point in random walk is the origin.",
+          "hint":"Checks that the student prints the origin. (The student may make a mistake of not starting at the origin so check the starting point assigned at the top of the main method of RandomWalker, but it is more likely the student just forgot to print the origin before walking.) Check the logic at the begininning/before entering the loop."
+        },
+        "3": {
+          "description":"Check that successive points in random walk are neighbors.",
+          "hint":"As the RandomWalker can only move one block forward, backward, or sideways at a time, blocks visited successively must be neighbors. If this fails, check the conditional logic and random number generation within the loop of the main method of RandomWalker. Possible error: The student should generate a random number and then save it and use it for all the conditional checks, not generate a new random number for each check."
+        },
+        "4": {
+          "description":"Check that squared distance is consistent with last point in walk.",
+          "hint":"Checks that the student calculates the mean squared distance correctly, and/or remembers to print the final position. If either one of these doesn't happen this will fail. Check test 1 for possible missing steps. If the student has the origin, they are likely missing the last step. If they have all steps, check calculation of mean squared (in or near the last print statement in the main of RandomWalker -- if it is done in this may be an error with concatenation, see formatting test 0a and correctness test 0b). If the endpoint is (x,y), the dist squared should be xx + yy."
+        },
+        "5": {
+          "description":"Check correctness for corner cases.",
+          "hint":"Checks correctness of walks of 0 and 1 steps. If this fails, check for off-by-one errors in the first loop in the main method of RandomWalker. If test 4 also failed, this may be a printing concatenation/calculation error. Check in or before the final print statement in the main method for calculation errors."
+        },
+        "6": {
+          "description":"Check that program produces different walks each time.",
+          "hint":"Checks that the walks are indeed random. Each walk should be unique if this is true. If this fails, check to see if the student hard coded something for determining steps instead of calling the Math.random() in the main loop in the main method of RandomWalker."
+        },
+        "7": {
+          "description":"Check randomness of individual steps in walk.",
+          "hint":"Checks that the steps within a walk are indeed random. If this fails, check to see if the student hard coded something for determining steps instead of calling the Math.random() in the main loop in the main method of RandomWalker. This may also signal an error in their generation and use of a random number. Check the conditionals pertaining to probability within the main loop."
+        },
+        "8": {
+          "description":"Check randomness of mean squared distances.",
+          "hint":"Checks that for different walks of the same step length, the final distance is random. If this fails, check that the student has not hard coded part of the walk in the main loop of the main method of Random Walker. More likely, the student has made some error calculating the mean squared distance. See test 4."
+        },
+        "9": {
+          "description":"Check what happens when math.random() always returns the same value.",
+          "hint":"The walk should move only in one direction if the student has handled Math.random() correctly. If the student fails this test, most likely they are failing some other more specific test (possibly missing the origin as the first point in their path). Check previous tests for more details."
+        }
+      },
+      "Bits": {
+        "0a": {
+          "description":"Check formatting of inputs from assignment specification.",
+          "hint":"Checks some general outputs for formatting, will fail if outputs are formatted improperly, or cases of bits == 0 or bits < 0 are not handled correctly (no line should be printed for 0, error should be printed for negative bits). Check conditionals in the main method of Bits and see following tests for more details.\n(May see some fail test for error message if they print more than just the error message - check for missing if-else logic in main method.)"
+        },
+        "0b": {
+          "description":"Check correctness of inputs from assignment specification.",
+          "hint":"Checks some general outputs for correctness, will fail if calculations of binary number is incorrect, or cases of bits == 0 or bits < 0 are not handled correctly (no line should be printed for 0, error should be printed for negative bits). Check conditionals in the main method of Bits and see following tests for more details.\n(May see some fail test for error message if they print more than just the error message - check for missing if-else logic in main method.)"
+        },
+        "1": {
+          "description":"Check when n is a power of 2.",
+          "hint":"Check the binary-conversion logic correctness. If this fails, most likely the test below fails as well. Check the logic of the while loop in the main method of Bits used for calculating and outputting the binary digits."
+        },
+        "2": {
+          "description":"Check when n is not a power of 2.",
+          "hint":"Check the binary-conversion logic correctness. If this fails, most likely the test above fails as well, otherwise the student may have failed to recognize cases when n/2^k is 1 (unlikely). Check the logic of the while loop in the main method of Bits used for calculating and outputting the binary digits."
+        },
+        "3": {
+          "description":"Check when n is a corner case.",
+          "hint":"Checks corner cases, 0 and 2147483647 (overflow). If this fails, check the handling of the case n = 0 in the main method of Bits."
+        },
+        "4": {
+          "description":"Check when n is negative.",
+          "hint":"Checks that the student correctly handles illegal inputs. Should print \"Illegal input\" and nothing else. Some students may fail this test if they check for illegal inputs but then do not return or something similar and place a while loop after that statement with no check for n >= 0. Check conditional logic for n < 0 in the main method of Bits."
+        },
+        "5": {
+          "description":"Check for random n.",
+          "hint":"Stress testing (if this is failing it likely is being more specifically tested somewhere else -- refer to previous tests)."
+        }
+      }
+    },
+    "N-Body Simulation": {
+      "LINK": "assignments/nbody/",
+      "tests": {
+        "1": {
+          "description":"Check that it reads data from standard input.",
+          "hint":"Checks that the program reads data (necessary to take in data that will be processed). If this fails, the student is likely failing due to some other error (out of bounds or too many operations etc.). Check error messages being generated and future tests to find problem."
+        },
+        "2": {
+          "description":"Check number of calls to stdin.readint(), stdin.readdouble(), stdin.readstring().",
+          "hint":"Checks that the student is reading data in properly by type and amount (closely related to test 1). If this fails, most likely some other error (out of bounds etc.) is causing it to fail. Check other tests and error messages for hints."
+        },
+        "3": {
+          "description":"Check formatting of standard output.",
+          "hint":"Checks the formatting of the output according to assignment specifications. If this fails, it may be due to some other error (see error messages), otherwise check the for loop and print statements at the bottom of the main method for improper formatting. If there are too many lines of code in the student solution, they may have placed their printing loop inside the main loop (printing each iteration of the loop)."
+        },
+        "4": {
+          "description":"Check formatting of output (double vs. float).",
+          "hint":"Checks that the students are using doubles not floats and formatting the output data correctly. If this fails, check print statements at the bottom of the main loop, and ensure that the student is using double for their values."
+        },
+        "5": {
+          "description":"Check standard output for planets.txt when t = 0 (no motion).",
+          "hint":"Checks the edge case where no planets move. If this fails, check the bounds of the main loop. (If the student used a counter initially t = 0 but set their bounds as t <= tau, this will fail.)"
+        },
+        "6": {
+          "description":"Check standard output for various files when t = 0 (no motion).",
+          "hint":"Similar to Test 5, fails if the student handles the edge case improperly. Check the bounds of the main loop. Alternatively, the student could fail for formatting reasons, so check tests 3 and 4, and the print statements at the end of the main method."
+        },
+        "7": {
+          "description":"Check that standard output does not change if bodies in input file are randomly permuted.",
+          "hint":"If this fails, likely there is some calculation error (see tests 18-20), or a formatting error. See previous and later tests for more specific hints."
+        },
+        "8": {
+          "description":"Check standard output for file containing only 1 body (no gravity).",
+          "hint":"Checks that simple motion is being calculated properly. If this fails, check first for formatting errors or printing before the main loop instead of after it. Then, check for calculation errors involving updating position (bottom of the main loop before drawing planets)."
+        },
+        "9": {
+          "description":"Check standard output for file containing bodies with nearly zero mass (no gravity).",
+          "hint":"Checks calculations of positions for multiple bodies. If this fails, check formatting errors and other error messages, then check the main loop calculation portion. The student may have calculated changes in position while calculating forces. (There should be two separate loops.)"
+        },
+        "10": {
+          "description":"Check standard output for fractional t and dt (no gravity).",
+          "hint":"Checks that the student used double for t and dt. If the student fails this test, check that they did not define int t = 0 for the counter/in the for loop setup. Other errors that arose previously can also cause this to fail."
+        },
+        "11": {
+          "description":"Check number of calls to stddraw.setxscale() and stddraw.setyscale().",
+          "hint":"The student should only call each of these methods once. If they are failing this test, check that they did not place them inside the for loop or where the planets are drawn."
+        },
+        "12": {
+          "description":"Check arguments to stddraw.setxscale() and stddraw.setyscale()",
+          "hint":"Checks that the student properly scales the axes. Previous errors can cause this to fail. Otherwise, if this fails check the method calls located before the main for loop."
+        },
+        "13": {
+          "description":"Check number of calls to stdaudio.play().",
+          "hint":"Checks that the student only plays the music file once. If this fails, check that they did not place the method call inside the main for loop but above it."
+        },
+        "14": {
+          "description":"Check argument to stdaudio.play().",
+          "hint":"Checks that the student plays the proper audio. If this fails, likely some other error (out of bounds or otherwise) is causing it. Otherwise, check the argument of the method call before the main for loop in the main method."
+        },
+        "15": {
+          "description":"Check number of calls to stddraw.picture().",
+          "hint":"Checks that the student draws the proper amount of times. Previous errors can cause this to fail. Other possible errors include not re-drawing the background each time (see the beginning of the main for loop), or drawing planets incorrectly (see the end of the main for loop)."
+        },
+        "16": {
+          "description":"Check number of calls to stddraw.show() and stddraw.pause().",
+          "hint":"Checks that the student is calling show() and pause() properly. If this tests fails (not due to some previously persistent error), they likely placed these methods inside the planet-drawing inner loop. See the bottom of the main for loop."
+        },
+        "17": {
+          "description":"Check number of calls to stddraw.enabledoublebuffering().",
+          "hint":"Checks that the student is enabling double buffering just once at the beginning of the program. If this fails not due to some other error (out of bounds or otherwise), check to see that they have not placed the method call within the main loop."
+        },
+        "18": {
+          "description":"Check standard output for planets.txt, dt = 25000, and different values of t.",
+          "hint":"Checks the correctness of movement and gravity calculations. Common calculation errors include updating position while updating forces, not summing all forces, or using trigonometry incorrectly instead of using the x and y components of forces (sufficient to tell the student what they should have done instead of exactly what they likely did wrong here). Check the main loop."
+        },
+        "19": {
+          "description":"Check standard output for planets.txt, dt = 1, and different values of t.",
+          "hint":"Checks the correctness of movement and gravity calculations. Common calculation errors include updating position while updating forces, not summing all forces, or using trigonometry incorrectly instead of using the x and y components of forces (sufficient to tell the student what they should have done instead of exactly what they likely did wrong here). Check the main loop."
+        },
+        "20": {
+          "description":"Check standard output for planets.txt, t = 25000, and different values of dt.",
+          "hint":"Checks the correctness of movement and gravity calculations. Common calculation errors include updating position while updating forces, not summing all forces, or using trigonometry incorrectly instead of using the x and y components of forces (sufficient to tell the student what they should have done instead of exactly what they likely did wrong here). Check the main loop."
+        },
+        "21": {
+          "description":"Check standard output for files containing more than 5 bodies.",
+          "hint":"Checks the correctness of movement and gravity calculations. Common calculation errors include updating position while updating forces, not summing all forces, or using trigonometry incorrectly instead of using the x and y components of forces (sufficient to tell the student what they should have done instead of exactly what they likely did wrong here). Check the main loop."
+        },
+        "22": {
+          "description":"Check standard output for varying t.",
+          "hint":"Checks the correctness of movement and gravity calculations. Common calculation errors include updating position while updating forces, not summing all forces, or using trigonometry incorrectly instead of using the x and y components of forces (sufficient to tell the student what they should have done instead of exactly what they likely did wrong here). Check the main loop."
+        },
+        "23": {
+          "description":"Check standard draw for planets.txt.",
+          "hint":"Checks that the planets are drawn in the proper place and the proper number of times. If this fails, check that the student has not drawn the planets before updating their positions (before the main loop)."
+        }
+      }
+    },
+    "Conjunction Function": {
+      "LINK":"assignments/functions/"
+
+    },
+    "Recursive Graphics": {
+      "LINK": "assignments/sierpinski/",
+      "Transform2D": {
+        "0a": {
+          "description":"Call copy() - return new array object.",
+          "hint":"Ensure that the student does not just return the same array as given, but defensively copies the values into a separate array and returns that. Check the copy() method in Transform2D."
+        },
+        "0b": {
+          "description":"Call copy() - return copy of array with identical values.",
+          "hint":"Checks that the values returned by copy() are merely copied from the argument array without being altered. If this fails check the copy() method in Transform2D."
+        },
+        "0c": {
+          "description":"Call copy() - doesn't mutate argument array.",
+          "hint":"copy() should copy the argument array without altering the client's array values. If this fails, check that the student is not altering the given array when copying from it in copy()."
+        },
+        "1a": {
+          "description":"Call scale() with fixed polygons.",
+          "hint":"Checks the correctness of scale() in Transform2D. If this fails, check that the student is properly scaling each coordinate and saving the scaled coordinates in the argument array (NOT creating a new array)."
+        },
+        "1b": {
+          "description":"Call scale() with random polygons.",
+          "hint":"Checks the correctness of scale() in Transform2D. If this fails, check that the student is properly scaling each coordinate and saving the scaled coordinates in the argument array (NOT creating a new array)."
+        },
+        "1c": {
+          "description":"Call scale(x, y, alpha); scale(x, y, 1/alpha).",
+          "hint":"Checks the correctness of scale(). (The final shape should be the original shape - scale then inverse)."
+        },
+        "2a": {
+          "description":"Call translate() with fixed polygons.",
+          "hint":"Check the correctness of translate(). If this fails, check that the student is properly transforming each coordinate and saving the transformed coordinates in the argument array (NOT creating a new array)."
+        },
+        "2b": {
+          "description":"Call translate() with random polygons.",
+          "hint":"Check the correctness of translate(). If this fails, check that the student is properly transforming each coordinate and saving the transformed coordinates in the argument array (NOT creating a new array)."
+        },
+        "2c": {
+          "description":"Call translate(x, y, +dx, +dy); translate (x, y, -dx, dy).",
+          "hint":"Checks the correctness of translate()."
+        },
+        "3a": {
+          "description":"Call rotate() with fixed polygons.",
+          "hint":"Checks the correctness of the rotate() method. If this fails, check the student's rotation formulas in their rotate() method."
+        },
+        "3b": {
+          "description":"Call rotate() with random polygons.",
+          "hint":"Checks the correctness of the rotate() method. If this fails, check the student's rotation formulas in their rotate() method."
+        },
+        "3c": {
+          "description":"Call rotate(x, y, theta); rotate (x, y, -theta).",
+          "hint":"Checks the correctness/consistency of the rotate() method (should be invertible -- final output should be the initial input). If this fails, check the student's rotation formulas in their rotate() method."
+        }
+      },
+      "Sierpinski": {
+        "0a": {
+          "description":"Check for use of standard input or output.",
+          "hint":"Checks that the student is reading and writing as per assignment specifications. If this fails the student likely has some other error caused by failed recursion or something that can be seen by the error printed. See the following tests for hints/check logic of Sierpinski."
+        },
+        "0b": {
+          "description":"Check formatting of standard drawing as per assignment specification.",
+          "hint":"If this fails the student likely has some other error caused by failed recursion or something that can be seen by the error printed. See the following tests for hints/check logic of Sierpinski."
+        },
+        "1a":{
+          "description":"Check height() of equilateral triangles of standard lengths.",
+          "hint":"Checking correctness of height() method. If this fails, check the error message in the TESTS file. (The student may have tried to alter the API, causing this test to fail.)"
+        },
+        "1b": {
+          "description":"Check height() of equilateral triangles of arbitrary lengths.",
+          "hint":"Checks the correctness of height(). If this fails, check the previous test, or the formula the student is using for the height/some other calculation error."
+        },
+        "2a": {
+          "description":"Check filledtriangle() for standard locations and lengths.",
+          "hint":"Checks correctness of filledtriangle(). If this fails, check that the student calculated the vertices correctly. (Should have vertices x - length/2, x, x + length/2, y, and two y + height.)"
+        },
+        "2b": {
+          "description":"Check filledtriangle() for arbitrary locations and lengths.",
+          "hint":"Checks correctness of filledtriangle(). If this fails, check that the student calculated the vertices correctly. (Should have vertices x - length/2, x, x + length/2, y, and two y + height.)"
+        },
+        "3a": {
+          "description":"Check sierpinski() for standard locations and lengths.",
+          "hint":"Checking correctness of sierpinski(). If this fails it is likely caused by a failure in one of their previous methods, so check the previous tests. Otherwise, check the logic of their sierpinski() method."
+        },
+        "3b": {
+          "description":"Check sierpinski() for arbitrary locations and lengths.",
+          "hint":"Checking correctness of sierpinski(). If this fails it is likely caused by a failure in one of their previous methods, so check the previous tests. Otherwise, check the logic of their sierpinski() method."
+        },
+        "4a": {
+          "description":"Check filled triangles in main().",
+          "hint":"Checking correctness of main() and the drawn output. If this fails it is likely caused by a failure in one of their previous methods, so check the previous tests. Otherwise, check that the student called StdDraw.show() somewhere, otherwise nothing will have been shown in the output."
+        },
+        "4b": {
+          "description":"Check outline triangle in main().",
+          "hint":"Checking correctness of main() and the drawn output. If this fails it is likely caused by a failure in one of their previous methods, so check the previous tests. Otherwise, check that the student called StdDraw.show() somewhere, otherwise nothing will have been shown in the output."
+        }
+      },
+      "Art": {
+        "1": {
+          "description":"Check for use of standard input or output.",
+          "hint":"Checks that the student is reading from standard input and drawing as per assignment specifications. This will more likely fail from some other problem causing an error. Check the lines specified by the error messages to see where the student may be failing Art.java. (out of bounds exceptions, files not found, etc.)"
+        },
+        "2": {
+          "description":"Check formatting of standard drawing.",
+          "hint":"Checks that the drawing is being done correctly. This can fail due to other errors (as with Test 1, check the lines specified by the errors in Art.java), or the student drawing outside of the standard draw box. Check that the student scaled the drawing window before drawing in the main method of Art.java."
+        }
+      },
+      "Drawing Sierpinski": {
+        "1": {
+          "description":"Save to file.",
+          "hint":"Checks that the student saves output to a file as per assignment specifications."
+        }
+      },
+      "Drawing Art": {
+        "1": {
+          "description":"Save to file.",
+          "hint":"Checks that the student is saving to a file as per assignment specifications."
+        }
+      }
+    },
+    "Hamming Codes in TOY": {
+      "LINK": "assignments/hamming/"
+
+    },
+    "Machine Learning Classifier": {
+      "LINK": "assignments/classifier/"
+
+    },
+    "Guitar Hero": {
+      "LINK": "assignments/guitar/"
+
+    },
+    "Markov Model": {
+      "LINK": "assignments/markov/"
+
+    },
+    "TSP": {
+      "LINK": "assignments/tsp/"
+
+    }
   }
 }
