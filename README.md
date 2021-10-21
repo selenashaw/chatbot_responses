@@ -26,6 +26,10 @@ Each of the tests are stored in sections in the following format:
 Where test number is the number assigned to the TigerFile test, can be 
 strings like "0a" or "5", just make sure it matches the number in the actual
 TigerFile test!
+When there are correctness tests and runtime/memory/other tests, please split
+these tests up as they are split on the TigerFile results, an example of this
+can be found in "RingBuffer", "RingBuffer Memory", and "RingBuffer Timing" for 
+"Guitar Hero" in COS126.JSON.
 
 ## Adding a new assignment (or adding to an existing assignment)
 To add a new assignment to the chatbot, open the JSON file for the relevant

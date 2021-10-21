@@ -542,24 +542,660 @@
       }
     },
     "Hamming Codes in TOY": {
-      "LINK": "assignments/hamming/"
-
+      "LINK": "assignments/hamming/",
+      "encode": {
+        "0a": {
+          "description":"Count number of lines of code in encode.toy.",
+          "hint":""
+        },
+        "0b": {
+          "description":"Check formatting for assignment specification input file.",
+          "hint":"Checks the correctness pertaining to number of lines and reading from standard input. (Mistakes include reading when standard input is empty or not attempting a solution. For the former see the following tests.)"
+        },
+        "0c": {
+          "description":"Check correctness for assignment specification input file.",
+          "hint":"Similar to the previous test, checks correctness pertaining to formatting. Errors may include no solution or an incorrect solution (reading from standard input when empty etc.). Check errors and following tests."
+        },
+        "1": {
+          "description":"Check that encode.toy consumes all data on standard input.",
+          "hint":"Likely errors include reading from standard input when input is empty. Check the read-in section at the top of the main loop."
+        },
+        "2": {
+          "description":"Check correctness for checklist input files.",
+          "hint":"Checks correctness. See previous/future tests for more specifics. Most likely the problem is with the reading/writing of standard input (see 0b/0c)."
+        },
+        "3": {
+          "description":"Check correctness for input files comprising 4 message bits.",
+          "hint":"Checking correctness on a small subset of inputs. If this fails, the student is likely calculating their output incorrectly. Check the calculation/output in the main loop."
+        },
+        "4": {
+          "description":"Check correctness for input file containing only ffff.",
+          "hint":"Checks that the student correctly checks for end-of-file."
+        },
+        "5": {
+          "description": "Check correctness for random inputs.",
+          "hint":"If the student is failing this, check previous tests for more specific hints."
+        }
+      },
+      "decode": {
+        "0a": {
+          "description":"Count number of lines of code in decode.toy.",
+          "hint":""
+        },
+        "0b": {
+          "description":"Check formatting for assignment specification input file.",
+          "hint":"If this fails, the student is likely having correctness issues. Common issues include reading too much or too little from standard input. Check the top of the main loop in decode.toy."
+        },
+        "1": {
+          "description":"Check that decode.toy consumes all data on standard input.",
+          "hint":"Check that the student is reading in input and correctly checking for the end of standard input at the top of the main loop."
+        },
+        "2": {
+          "description":"Check correctness for checklist input files.",
+          "hint":"Checks that the student's decoding is correct. The most common error is failing to read/write properly (see test 0b and 1)."
+        },
+        "3a": {
+          "description":"Check correctness for some input files comprising a single group of 7 bits.",
+          "hint":"Checks for a small subset of simple inputs (some submissions with reading problems may pass this test). If incorrect but reading correctly, check the calculation of correct parity in the main loop."
+        },
+        "3b": {
+          "description":"Check correctness for all inputs comprising a single group of 7 bits.",
+          "hint":"Checks for more of the subset of simple inputs of one message (some submissions with reading problems may pass this test). If incorrect but reading correctly, check the calculation of correct parity in the main loop."
+        },
+        "4": {
+          "description":"Check correctness for input files that flip a specific message or parity bit.",
+          "hint":"Checks correctness for a small subset of inputs. Likely errors are related to test 0b/1 (reading/writing input/output)."
+        },
+        "5": {
+          "description":"Check correctness for input file containing only ffff.",
+          "hint":""
+        },
+        "6": {
+          "description":"Check correctness for random inputs.",
+          "hint":"Most errors are related to reading/writing (see test 1/0b)."
+        }
+      }
     },
     "Machine Learning Classifier": {
       "LINK": "assignments/classifier/"
 
     },
     "Guitar Hero": {
-      "LINK": "assignments/guitar/"
-
+      "LINK": "assignments/guitar/",
+      "RingBuffer": {
+        "1a": {
+          "description":"Random calls to enqueue() and peek().",
+          "hint":"Test for correctness. If there is an issue, check what the last method called was before failing. This is likely an issue with enqueue. Check that the student is assigning the element at the end and incrementing the last index correctly in enqueue()."
+        },
+        "1b": {
+          "description":"Random calls to enqueue() and peek().",
+          "hint":"Test for correctness. If there is an issue, check what the last method called was before failing. This is likely an issue with enqueue. Check that the student is assigning the element at the end and incrementing the last index correctly in enqueue()."
+        },
+        "2a": {
+          "description":"Random calls to enqueue(), isfull(), size(), and capacity().",
+          "hint":"Testing the correctness of isfull(), size(), and capacity(). If this fails, check which method is causing the test to fail. Check that the student is initializing the capacity correctly, and updating the size correctly during enqueue()."
+        },
+        "2b": {
+          "description":"Random calls to enqueue(), isfull(), size(), and capacity().",
+          "hint":"Testing the correctness of isfull(), size(), and capacity(). If this fails, check which method is causing the test to fail. Check that the student is initializing the capacity correctly, and updating the size correctly during enqueue()."
+        },
+        "3a": {
+          "description":"Random calls to enqueue(), dequeue(), and peek().",
+          "hint":"Checks correctness of enqueue(), dequeue(). If test 1 also fails, this is likely a problem with enqueue()."
+        },
+        "3b": {
+          "description":"Random calls to enqueue(), dequeue(), and peek().",
+          "hint":"Checks correctness of enqueue(), dequeue(). If test 1 also fails, this is likely a problem with enqueue()."
+        },
+        "4a": {
+          "description":"Random calls to all methods.",
+          "hint":"General correctness test. See previous tests for more specifics."
+        },
+        "4b": {
+          "description":"Random calls to all methods.",
+          "hint":"General correctness test. See previous tests for more specifics."
+        },
+        "5": {
+          "description":"Random calls to all methods, with small ring buffer capacities.",
+          "hint":"General correctness test. See previous tests for more specifics."
+        },
+        "6": {
+          "description":"Calls to isfull(), isempty(), size(), and capacity() before enqueueing any items.",
+          "hint":"Checks the correctness of the above methods while the RingBuffer is still empty. If this is wrong, check that the student initializes values correctly in the constructor and handles this edge case correctly."
+        },
+        "7": {
+          "description":"Exceptional calls to enqueue(), dequeue(), and peek().",
+          "hint":"Checks that the student handles exceptions correctly. If this fails check that each of the methods tries to check for edge cases. Check that the student is handling isFull() and isEmpty() correctly."
+        },
+        "8": {
+          "description":"Create a ring buffer of capacity n; enqueue() n items, with each item having value 0 with probability p; dequeue() n items.",
+          "hint":"General correctness testing. See previous tests for more specifics."
+        },
+        "9": {
+          "description":"Create multiple ring buffer objects at the same time.",
+          "hint":"Checks that multiple objects can be created (the RingBuffer array and other instance variables are not static), but also a more general correctness test."
+        }
+      },
+      "RingBuffer Memory": {
+        "1a-1k": {
+          "description":"Total memory usage for RingBuffer of capacity n.",
+          "hint":"Checks that the student uses a linear amount of memory for this object (unlikely to fail)."
+        }
+      },
+      "RingBuffer Timing": {
+        "1a-1k": {
+          "description":"Create RingBuffer of capacity n; enqueue() n items; interleave n calls each to dequeue(), peek(), and enqueue().",
+          "hint":"Checks that all methods take constant time. If this fails it likely fails due to some other issue."
+        },
+        "2a-2k": {
+          "description":"Create RingBuffer of capacity n; enqueue n/2 items; then make n random calls to size(), isEmpty(), isFull(), enqueue(), dequeue(), and peek().",
+          "hint":"General correctness test of all methods."
+        }
+      },
+      "GuitarString": {
+        "1a": {
+          "description":"Construct guitarstring of specified frequency and check length().",
+          "hint":"Checks the correctness of length(). Check that the student is calculating the length correctly in the constructor of GuitarString, and if they save it in an instance variable, that they are saving to the instance variable and not to a local variable of the same name."
+        },
+        "1b": {
+          "description":"Construct guitarstring of specified frequency and check length().",
+          "hint":"Checks the correctness of length(). Check the calculation and storing of the length in the constructor/instance variables of GuitarString."
+        },
+        "2": {
+          "description":"Construct guitarstring using init[] array and check length().",
+          "hint":"Checks the correctness of the array constructor in GuitarString. Similar to 1a, if the student is saving to an instance variable check that they aren't accidentally using a local variable instead."
+        },
+        "3a": {
+          "description":"Construct guitarstring of specified frequency and check that associated RingBuffer object has the desired capacity, size, and initial values.",
+          "hint":"Checks that the student is using RingBuffer correctly in their GuitarString objects. If this fails, check that the student is initializing the RingBuffer in the constructor with the correct length, as opposed to elsewhere where n is a different value (i.e. where instance variables are declared)."
+        },
+        "3b": {
+          "description":"Construct guitarstring of specified frequency and check that associated RingBuffer object has the desired capacity, size, and initial values.",
+          "hint":"See test 3a."
+        },
+        "4": {
+          "description":"Construct guitarstring using init[] array; check that associated RingBuffer object has the desired capacity, size, and initial values.",
+          "hint":"See test 3a - check that the student is using the right initialization length for the RingBuffer."
+        },
+        "5": {
+          "description":"Construct guitarstring of specified frequency; call pluck(); and check that associated RingBuffer object has uniformly random values between -0.5 and 0.5.",
+          "hint":"Checks that the student is correctly filling the ringbuffer with new values during a pluck(). See errors in the TESTS file for runtime errors the student may be having to cause this to fail."
+        },
+        "6": {
+          "description":"Construct guitarstring using init[] array; call pluck(); and check that associated RingBuffer object has uniformly random values between -0.5 and 0.5.",
+          "hint":"Checks the correctness of pluck() and the array constructor. See previous tests for hints on which is failing. Otherwise, ensure that the student is using StdRandom.uniform(-0.5, 0.5), not something similar but not quite the same/correct."
+        },
+        "7": {
+          "description":"Construct guitarstring using init[] array; perform alternating sequence of calls to sample() and tic().",
+          "hint":"Checks the correctness of sample() and tic(). If this is failing and one of the previous tests is also failing, this is likely due to an error with the constructed RingBuffer object."
+        },
+        "8": {
+          "description":"Random intermixed calls to sample() and tic().",
+          "hint":"Check of correctness of sample() and tic(). If this fails, check to see if it may be caused by an issue with the constructor (see previous tests)."
+        },
+        "9": {
+          "description":"Random intermixed calls to sample(), tic(), and pluck().",
+          "hint":"Check previous tests, and see runtime errors printed to see why the student may have failed. One possibility is trying to access an instance variable of RingBuffer directly instead of through the interface."
+        },
+        "10": {
+          "description":"Construct two guitarstring objects using init1[] and init2[] arrays; perform alternating sequence of calls to sample() and tic().",
+          "hint":"Checks the correctness of sample() and tic()."
+        }
+      },
+      "GuitarString Timing": {
+        "1": {
+          "description":"Construct guitarstring using init[] array; repeatedly call tic() and sample() and check the number of calls to methods in RingBuffer.",
+          "hint":"If this fails, the student may have misunderstood how to use a RingBuffer, and enqueued and dequeued all numbers to shift over."
+        },
+        "2": {
+          "description":"Construct guitarstring using init[] array; call pluck() and check the number of calls to methods in RingBuffer.",
+          "hint":"Checks that pluck() is working correctly in the correct number of method calls. See correctness tests and errors for possible problems causing this test to fail."
+        },
+        "2a-2k": {
+          "description":"Create a guitarstring of length n; call pluck(); then, interleave n calls each sample() and tic().",
+          "hint":""
+        }
+      },
+      "GuitarHero": {
+        "1a": {
+          "description":"Check that pluck() is called exactly once for each keystroke.",
+          "hint":"Checks the correctness of student interpretation of keystrokes. The most common error is using StdDraw.hasNextKeyTyped() instead of Keyboard.hasNextKeyTyped()."
+        },
+        "1b": {
+          "description":"Check that pluck() is called exactly once for each keystroke.",
+          "hint":"Similar to the previous test, but including keystrokes not in the keyboard. Probably similar issue to the previous test, but may include not handling non-keyboard keystrokes properly."
+        },
+        "2a": {
+          "description":"Check that GuitarString objects are constructed with correct frequencies for integral frequencies.",
+          "hint":"Checks that the student sets up the keyboard and sets up strings with the correct frequencies. The same problem from test 1 may cause this to fail. Otherwise set up the initialization at the beginning of the main method."
+        },
+        "2b": {
+          "description":"Check that GuitarString objects are constructed with correct frequencies for arbitrary frequencies.",
+          "hint":"Checks that the student sets up the keyboard and sets up strings with the correct frequencies. The same problem from test 1 may cause this to fail. Otherwise set up the initialization at the beginning of the main method."
+        },
+        "3": {
+          "description":"Check that tic() is called once per call to StdAudio.play().",
+          "hint":"Check that the string tics each time a note is played (the sound is evolving). Check the main loop of the main method."
+        },
+        "4a": {
+          "description":"Check correctness of output on StdAudio for short time intervals with no feedback.",
+          "hint":"Check for the correctness of the GuitarStrings without feedback. Problems not associated with tic()."
+        },
+        "4b": {
+          "description":"Check correctness of output on StdAudio for single keystrokes.",
+          "hint":"Check for correctness of a single keystroke. Check how the student plucks a note, and updates at each time set."
+        },
+        "4c": {
+          "description":"Check correctness of output on StdAudio for strings with integral frequencies.",
+          "hint":"General check of correctness on plucking and updating."
+        },
+        "4d": {
+          "description":"Check correctness of output on StdAudio for arbitrary frequencies.",
+          "hint":"General check of correctness on plucking and updating."
+        },
+        "4e": {
+          "description":"Check correctness of output on StdAudio for arbitrary keystrokes, some non-keyboard keystrokes.",
+          "hint":"General check of correctness on plucking and updating, with check for non-keyboard keystrokes."
+        },
+        "4f": {
+          "description":"Check correctness of output on StdAudio for random sequence of integral frequencies.",
+          "hint":"General check of correctness on plucking and updating."
+        },
+        "4g": {
+          "description":"Check correctness of output on StdAuido for random sequence of arbitrary frequencies.",
+          "hint":"General check of correctness on plucking and updating."
+        }
+      }
     },
     "Markov Model": {
-      "LINK": "assignments/markov/"
-
+      "LINK": "assignments/markov/",
+      "MarkovModel": {
+        "1": {
+          "description":"Check order() method.",
+          "hint":"Checks that the order() method returns properly. Issues seem uncommon but are likely due to a solution missing, or possibly instance variables not being initialized. Otherwise, there may be a runtime error in the constructor (out of bounds error etc.)"
+        },
+        "2a": {
+          "description":"Check 1-argument freq() method.",
+          "hint":"Checks that the student can correctly return the frequency of a kgram."
+        },
+        "2b": {
+          "description":"Check 1-argument freq() method.",
+          "hint":"Checks that the student can correctly return the frequency of a kgram (for larger inputs - may fail due to some other error in constructor if 2a passes)."
+        },
+        "2c": {
+          "description":"Check 1-argument freq() method for kgrams that do not appear in the text.",
+          "hint":"Should be able to recognize a kgram that has not been seen. Should return 0 if it has not been seen, NOT throw an exception."
+        },
+        "2d": {
+          "description":"Check 1-argument freq() method over random strings and various alphabets.",
+          "hint":"General correctness test."
+        },
+        "3a": {
+          "description":"Check 2-argument freq() method for all kgrams that appear in the text.",
+          "hint":"Checks that the student correctly calculated and stored the frequencies for kgrams of small k."
+        },
+        "3b": {
+          "description":"Check 2-argument freq() method for kgrams in the text.",
+          "hint":"Checks that the student correctly calculated and stored the frequencies for kgrams of different k (if 3a does not fail and this does it suggests some problem with dividing the kgrams in the constructor)."
+        },
+        "3c": {
+          "description":"Check 2-argument freq() method for kgrams not found in the text.",
+          "hint":"Passing this test and failing the previous two suggest the student either is failing to read in any frequencies (check the logic of the constructor), or more likely they are not using their STs properly. Check the logic of the two argument freq() method (this should merely recall and return some values from an ST). Should return 0 if it has not been seen, NOT throw an exception."
+        },
+        "4a": {
+          "description":"Check that 1- and 2-argument freq() methods are consistent.",
+          "hint":"Checks that the two freq() methods are consistent, which suggest the students are using the STs properly. If this fails, one of the methods might be failing due to some other error (ie not checking if a character exists in a kgram's associated ST causing a NULL pointer error)."
+        },
+        "4b": {
+          "description":"Check that 1- and 2-argument freq() methods are consistent",
+          "hint":"Checks that the two freq() methods are consistent, which suggest the students are using the STs properly. If this fails, one of the methods might be failing due to some other error (ie not checking if a character exists in a kgram's associated ST causing a NULL pointer error)."
+        },
+        "5a": {
+          "description":"Check tostring() method.",
+          "hint":"Checks the toString() method, which both checks format and that the student calculated the frequencies properly. If they fail this test and some tests in 2/3, see their constructor with errors in frequency storage and calculation. Otherwise, check the formatting of the output in the toString() method."
+        },
+        "5b": {
+          "description":"Check toString() method.",
+          "hint":"Checks the toString() method, which both checks format and that the student calculated the frequencies properly. If they fail this test and some tests in 2/3, see their constructor with errors in frequency storage and calculation. Otherwise, check the formatting of the output in the toString() method."
+        },
+        "5c": {
+          "description":"Check tostring() method for k = 0.",
+          "hint":"Checks the toString() method, which both checks format and that the student calculated the frequencies properly for the edge case k = 0. If they fail this test and some tests in 2/3, see their constructor with errors in frequency storage and calculation. Otherwise, check the formatting of the output in the toString() method."
+        },
+        "6a": {
+          "description":"Check that toString() method is consistent with 2-argument freq() method.",
+          "hint":"Further checks that the student computed frequencies and formatted the output string properly."
+        },
+        "6b": {
+          "description":"Check that toString() method is consistent with 2-argument freq() method.",
+          "hint":"Further checks that the student computed frequencies and formatted the output string properly."
+        },
+        "7a": {
+          "description":"Check random() method for order 2 model.",
+          "hint":"Checks the randomness of an order 2 Markov Model. If this fails see the random() method to determine how the student is generating a random character (especially if the TESTS file shows no randomness)."
+        },
+        "7b": {
+          "description":"Check random() method for order 0 model.",
+          "hint":"Checks the randomness of an order k Markov Model. If this fails see the random() method to determine how the student is generating a random character (especially if the TESTS file shows no randomness)."
+        },
+        "7c": {
+          "description":"Check random() method for order k model.",
+          "hint":"Checks the randomness of an order k Markov Model. If this fails see the random() method to determine how the student is generating a random character (especially if the TESTS file shows no randomness)."
+        },
+        "8a": {
+          "description":"Check that random() is consistent with freq() for order 2 model.",
+          "hint":"Checks that the student is storing frequencies and calculating probabilities properly based on the frequencies. If this test fails, especially if test 2 does not fail, see the random() method for logical errors."
+        },
+        "8b": {
+          "description":"Check that random() is consistent with freq() for order 0 model.",
+          "hint":"Checks that the student is storing frequencies and calculating probabilities properly based on the frequencies. If this test fails, especially if test 2 does not fail, see the random() method for logical errors."
+        },
+        "9": {
+          "description":"Check that repeated calls to order() and two freq() methods return same values.",
+          "hint":"Checks that the student is not mutating instance variables when calling order() and freq(). Likely fails due to some runtime error."
+        },
+        "10": {
+          "description":"Create two MarkovModel objects at the same time.",
+          "hint":"Checks that instance variables are not static."
+        },
+        "11": {
+          "description":"Call one-argument freq() method with invalid argument.",
+          "hint":"Checks that the student throws exception properly (wrong length kgram)."
+        },
+        "12": {
+          "description":"Call two-argument freq() with invalid argument.",
+          "hint":"Checks that the student throws exception properly (wrong length kgram)."
+        },
+        "13": {
+          "description":"Call random() with invalid argument.",
+          "hint":"Checks that the student throws exception properly (wrong length kgram, no such kgram)."
+        }
+      },
+      "MarkovModel Memory": {
+        "1": {
+          "description":"Check memory for input17.txt with varying k.",
+          "hint":"Checks memory usage against reference solution. If this fails one of the early tests, they may be using an array of wrapper types instead of an array of primitives, and the extra overhead causes them to fail for small k. (Integer[] instead of int[])"
+        },
+        "2": {
+          "description":"Check memory for larger texts.",
+          "hint":""
+        }
+      },
+      "MarkovModel Timing": {
+        "1": {
+          "description":"Construct MarkovModel and check number of calls to methods in ST.",
+          "hint":"If a method is called to many times, look at the constructor and determine if there is a way the student might have avoided calling the method twice within a loop (i.e. they are not saving the value, instead they are calling once in conditional and then again to use the value etc.) Additionally, be sure to check other methods that are called (the may have called freq() and also ST.contains(), when they should have used the value they got from freq() to determine if the kgram had been seen before."
+        },
+        "2": {
+          "description":"Construct MarkovModel; for each k-gram in text, call 1-argument freq(), check number of calls to ST methods.",
+          "hint":"The student may be calling get() twice, once to check that the return value is not null (it shouldn't be if they set up their constructor properly), and once to return the value. If they need to check this, they should save the value, then check and return the saved value."
+        },
+        "3": {
+          "description":"Construct MarkovModel; for each k-gram in text, call 2-argument freq(), check number of calls to methods in ST.",
+          "hint":"Similar to test 2, the student may be checking conditions they shouldn't need to if their constructor works properly, otherwise the student may not be saving some value they should save to avoid calling ST methods repeatedly."
+        },
+        "4": {
+          "description":"Construct MarkovModel; for each k-gram in text, call random(), count calls to ST methods.",
+          "hint":"The student may fail this test if they use a ST to store data for characters following kgrams, and have to transfer this data to an array to generate the random character. Point out that they might consider storing the values in a char-indexed array to avoid having to transfer. (Sacrifice some memory for time)"
+        },
+        "5": {
+          "description":"Construct MarkovModel; for each k-gram in text, call toString() method and check the number of calls to methods in ST.",
+          "hint":"Checks calls to ST methods. The most common error seems to be using a ST to store frequencies, and then using st.get()[i] in a conditional and then again when calling freq() to get the frequency. The student should instead save the frequency and then check if it is greater than zero and print if they choose to use this method."
+        },
+        "6a-6g": {
+          "description":"Construct MarkovModel for text of length n.",
+          "hint":"If this fails, likely due to string concatenation in the constructor."
+        },
+        "7a-7g": {
+          "description":"Construct MarkovModel and call order() method n times.",
+          "hint":"Checks that the order() method takes constant time."
+        },
+        "8a-8g": {
+          "description":"Construct MarkovModel and call 1-argument freq() method n times.",
+          "hint":"Checks that the one-argument freq() method takes constant time (recalls a value from the ST)."
+        },
+        "9a-9g": {
+          "description":"Construct MarkovModel and call 2-argument freq() method n times.",
+          "hint":"Checks that the two-argument freq() method takes constant time (recalls a value from the ST)."
+        }
+      },
+      "TextGenerator": {
+        "1a": {
+          "description":"Check number of characters in output.",
+          "hint":"Checks that the length of the students output is correct. Failing this test may suggest an issue with the bounds of the loop in the main method (it should go from i = 0 to i < T-k. If the number of extra characters is very consistent, check that the student is not printing something besides their output in the main method, possibly before the loop. Otherwise if the student is getting a out of bounds error of some sort, they are likely using the input string/text wrong. See future tests for more output correctness hints."
+        },
+        "1b": {
+          "description":"Check number of characters in output for corner cases.",
+          "hint":"Check output for cases where k and T are equal. If the student fails this they are likely also failing the last test. See notes there. Otherwise, the logic of the loop is likely flawed."
+        },
+        "2a": {
+          "description":"Check first k characters of output.",
+          "hint":"Checks that the student first prints the kgram of the text before printing anything else. If this fails and the student seems to be printing the same first letter always, check that they do not have a print statement of something else before printing the generated text. If the student fails test 1 but not this, it is likely an issue with how they are handling the kgram and text. Otherwise, check the bounds of the loops"
+        },
+        "2b": {
+          "description":"Check first k characters of output for corner cases.",
+          "hint":"Similar to the previous test, tests that the student first prints the original kgram."
+        },
+        "3": {
+          "description":"Check output for deterministic inputs.",
+          "hint":"Check the output given an input where only one output is possible (i.e. the alphabet were b is the only letter that ever comes after a...). Possible problems include an issue with the bounds of the loop in the main method (it should go from i = 0 to i < T-k. Check that the student is not printing something besides their output in the main method, possibly before the loop. If the student is getting a out of bounds error of some sort, they are likely using the input string/text wrong."
+        },
+        "4a": {
+          "description":"Check that output is nondeterministic.",
+          "hint":"Checks that the student outputs are random. Running the method twice on the same inputs should produce different outputs. Likely failing for the same reason as one of the tests above."
+        },
+        "4b": {
+          "description":"Check that output is nondeterministic.",
+          "hint":"Checks that the student handles the k=0 case properly. This should produce a text of proper length with all letter appearing randomly according to the number of instances. The student may fail for the same reasons as above, or because their logic with this edge case is wrong. (If they handle this case by returning immediately or something similar they will fail this test.)"
+        },
+        "5a": {
+          "description":"Check that every n-gram in output appear in input for n <= k+1.",
+          "hint":"Characters are outputted by the Markov model, so every ngram in the beginning of the output must also exist somewhere in the input. Problems with this test suggest the student is using the Markov model incorrectly. They may be either not outputting anything or have an extraneous print statement."
+        },
+        "5b": {
+          "description":"Check that every n-gram in output appear in input for n <= k+1.",
+          "hint":"See test 5a."
+        },
+        "6": {
+          "description":"Check that some n-grams in output do not appear in input for n = k+2.",
+          "hint":"Characters are outputted by the Markov model, so some output ngrams must deviate from the input due to randomness after n = k+2. Problems with this test suggest the student is using the Markov model incorrectly. They are likely not printing anything."
+        },
+        "7a": {
+          "description":"Check distribution of characters following each k-gram.",
+          "hint":"Checks that the student is using the Markov model correctly. If the student fails this test they are likely failing due to the same reasons as one of the previous tests (see test 1 for some ideas)."
+        },
+        "7b": {
+          "description":"Check distribution of characters following each k-gram.",
+          "hint":"Checks that the student is using the Markov model correctly. If the student fails this test they are likely failing due to the same reasons as one of the previous tests (see test 1 for some ideas)."
+        },
+        "7c": {
+          "description":"Check distribution of characters following each k-gram.",
+          "hint":"Checks distribution of characters for k = 0. If this fails but the previous two do not, the student is likely handling their kgram incorrectly."
+        }
+      },
+      "TextGenerator Timing": {
+        "1": {
+          "description":"Check number of calls to methods in MarkovModel.",
+          "hint":"This seems to fail most commonly when there is no student output. Otherwise, check that the student is merely using MarkovModel.random() and not attempting to reimplement the markov model (especially for the case where k = 0)."
+        },
+        "2a-2k": {
+          "description":"Generate random text of length t using markov model of order k = 2.",
+          "hint":"Submissions that fail this and not other tests are likely failing due to string concatenation issues (possibly building the entire output instead of merely printing as they go without using a StringBuilder or something similar)."
+        },
+        "3a-3k": {
+          "description":"Generate random text of length t = 100,000 using markov model of order k.",
+          "hint":"See previous tests - likely fails for other reasons."
+        }
+      }
     },
     "TSP": {
-      "LINK": "assignments/tsp/"
-
+      "LINK": "assignments/tsp/",
+      "Tour": {
+        "0": {
+          "description":"Construct tour using 4-argument constructor, then call size(), length(), draw(), or toString().",
+          "hint":"A general correctness test for the methods listed above. See the method that failed for a hint of where to look for problems. Likely errors with toString() include formatting errors."
+        },
+        "1": {
+          "description":"Check alternating sequence of calls to insertNearest() and size() with sample input files.",
+          "hint":"Checks that the student is updating the size correctly when inserting points. If this fails, check the insertNearest() method if the student is using an instance variable, else the size() method if the student is iterating through the list to count nodes."
+        },
+        "2a": {
+          "description":"Check alternating sequence of calls to insertNearest() and length() with sample input files.",
+          "hint":"Correctness test for insertNearest() and length(). Either length() is wrong (the previous test succeeded), or insertNearest() may be wrong. This will require checking the logic of the student's method. Likely errors include mishandling the linked list, causing failing due to some runtime error."
+        },
+        "2b": {
+          "description":"Check alternating sequence of calls to insertNearest() and length() for random points between 0.0 and 100.0.",
+          "hint":"General correctness test for insertNearest() and length(). Either length() is wrong (the previous test succeeded), or insertNearest() may be wrong. This will require checking the logic of the student's method. Likely errors include mishandling the linked list, causing failing due to some runtime error."
+        },
+        "2c": {
+          "description":"Check alternating sequence of calls to insertNearest() and length() with sample input files in which there are ties for which point to insert next.",
+          "hint":"Edge case correctness test for insertNearest() and length(). Either length() is wrong (the previous test succeeded), or insertNearest() may be wrong. If the previous two tests fail this likely fails due to the same problem. Otherwise, the student may be mishandling the comparison of distances (taking the last node of same distance, not the first etc.)."
+        },
+        "2d": {
+          "description":"Check alternating sequence of calls to insertNearest() and length() with points on a 100-by-100 lattice, likely to be ties.",
+          "hint":"General edge case correctness test for insertNearest() and length(). Either length() is wrong (the previous test succeeded), or insertNearest() may be wrong. If the 2a/b fail this likely fails due to the same problem. Otherwise, the student may be mishandling the comparison of distances (taking the last node of same distance, not the first etc.)."
+        },
+        "2e": {
+          "description":"Check alternating sequence of calls to insertNearest() and length() with points in ascending/descending order.",
+          "hint":"Correctness test of insertNearest() and length()."
+        },
+        "2f": {
+          "description":"Check alternating sequence of calls to insertNearest() and length() with points that have very large coordinates.",
+          "hint":"Stress test of insertNearest() and length() ."
+        },
+        "3": {
+          "description":"Check alternating sequence of calls to insertNearest() and toString().",
+          "hint":"Checks the correctness of the two methods listed above. If test 2 failed as well, this may be an issue with insertNearest(). Otherwise, check toString() for formatting and other errors."
+        },
+        "4": {
+          "description":"Check alternating sequence of calls to insertNearest() and draw().",
+          "hint":"Checks the correctness of the two methods listed above. If tests 2 and 3 also fail, likely an issue with insertNearest(). Otherwise, check draw() for logical errors."
+        },
+        "5": {
+          "description":"Check that toString() and length() are consistent after each call to insertNearest().",
+          "hint":"Checks that toString() and length() are correct relative to each other (this can pass even if insertNearest() is incorrect). If this fails, there may be some runtime error. Otherwise, check the bounds of the loops used in the two methods and the correctness of the linked list traversal in each (should look very similar). If this test fails but test 7 succeeds, the issue is likely with length()."
+        },
+        "6": {
+          "description":"Check that draw() and length() are consistent after each call to insertNearest().",
+          "hint":"Checks the correctness of draw() and length() relative to each other. (same as test 5, can pass even if insertNearest() is incorrect). If this fails, check the linked list traversal in both methods and compare - they should look very similar. If this test fails but test 7 succeeds, the issue is likely with length()."
+        },
+        "7": {
+          "description":"Check that toString() and draw() are consistent after each call to insertNearest().",
+          "hint":"Checks that toString() and draw() are correct relative to each other (this can pass even if insertNearest() is incorrect). If this fails, there may be some runtime error. Otherwise, check the bounds of the loops used in the two methods and the correctness of the linked list traversal in each (should look very similar). If this test fails and only one of test 5 or 6 fails, there is likely an issue with whichever method was tested next to length() in the failed test."
+        },
+        "8": {
+          "description":"Check alternating sequence of calls to insertSmallest() and size().",
+          "hint":"Checks that insertSmallest() correctly updates the size of the tour (if the student is looping through the tour and did so incorrectly, they would have failed test 1 also). If the student is not looping, they may have forgotten to update the size instance variable. Otherwise, insertSmallest() is likely incorrect."
+        },
+        "9a": {
+          "description":"Check alternating sequence of calls to insertSmallest() and length() for sample input texts.",
+          "hint":"Correctness test for insertSmallest() and length(). Either length() is wrong (the previous test succeeded), or insertSmallest() may be wrong. This will require checking the logic of the student's method. Likely errors include mishandling the linked list, causing failing due to some runtime error."
+        },
+        "9b": {
+          "description":"Check alternating sequence of calls to insertSmallest() and length() for random points 0.0, 100.0.",
+          "hint":"General correctness/stress test for insertSmallest() and length()."
+        },
+        "9c": {
+          "description":"Check alternating sequence of calls to insertSmallest() and length() for points with large coordinates.",
+          "hint":"General correctness/stress test for insertSmallest() and length()."
+        },
+        "10": {
+          "description":"Check alternating sequence of calls to insertSmallest() and toString().",
+          "hint":"Checks the correctness of the two methods listed above. If test 9 failed as well, this may be an issue with insertNearest(). Otherwise, check toString() for formatting and other errors."
+        },
+        "11": {
+          "description":"Check alternating sequence of calls to insertSmallest() and draw().",
+          "hint":"Checks the correctness of the two methods listed above. If test 9 failed as well, this may be an issue with insertNearest(). Otherwise, check draw() for issues with looping through the linked list."
+        },
+        "12": {
+          "description":"Check that toString() and length() consistent after each call to insertSmallest()",
+          "hint":"Checks that toString() and length() are correct relative to each other (this can pass even if insertSmallest() is incorrect). If this fails, there may be some runtime error. Otherwise, check the bounds of the loops used in the two methods and the correctness of the linked list traversal in each (should look very similar). If this test fails but test 14 succeeds, the issue is likely with length() (also tests 5 and 6 may have failed for insertNearest())."
+        },
+        "13": {
+          "description":"Check that draw() and length() are consistent after each call to insertSmallest().",
+          "hint":"Checks that draw() and length() are correct relative to each other (this can pass even if insertSmallest() is incorrect). If this fails, there may be some runtime error. Otherwise, check the bounds of the loops used in the two methods and the correctness of the linked list traversal in each (should look very similar). If this test fails but test 14 succeeds, the issue is likely with length() (also tests 5 and 6 may have failed for insertNearest())."
+        },
+        "14": {
+          "description":"Check that toString() and draw() are consistent after each call to insertSmallest().",
+          "hint":"Checks that toString() and draw() are correct relative to each other (this can pass even if insertSmallest() is incorrect). If this fails, there may be some runtime error. Otherwise, check the bounds of the loops used in the two methods and the correctness of the linked list traversal in each (should look very similar). If this test fails and only one of test 12 or 13 fails, there is likely an issue with whichever method was tested next to length() in the failed test."
+        },
+        "15": {
+          "description":"Check size(), length(), draw(), and toString() with a 0-point tour.",
+          "hint":"Checks the edge case of zero points."
+        },
+        "16": {
+          "description":"Check size(), length(), draw(), and toString() with a 1-point tour.",
+          "hint":"Checks the edge case of a one-point tour (failing this but not other tests suggest some failure to create/iterate a length-one linked list."
+        },
+        "17": {
+          "description":"Create two simultaneous tour objects; check size() and length().",
+          "hint":"Checks that the student did not use static variables and can create two separate tours correctly."
+        },
+        "18a": {
+          "description":"Random calls to insertNearest(), size(), and length().",
+          "hint":"Stress test for methods listed above."
+        },
+        "18b": {
+          "description":"Random calls to insertSmallest(), size(), and length().",
+          "hint":"Stress test for methods listed above."
+        },
+        "18c": {
+          "description":"Random calls to all methods.",
+          "hint":""
+        }
+      },
+      "Tour Memory": {
+        "1a-1f": {
+          "description":"Total memory usage for tour of length n.",
+          "hint":""
+        }
+      },
+      "Tour Timing": {
+        "1": {
+          "description":"Check number of calls to methods in point for n calls to insertNearest().",
+          "hint":"If this fails, the student is likely recomputing the distance between two points unnecessarily (for a conditional). They should compute and store the distance to use again."
+        },
+        "2": {
+          "description":"Check number of calls to methods in point for n calls to insertSmallest().",
+          "hint":"If this fails, the student is likely recomputing the distance between two points unnecessarily (for a conditional). They should compute and store the distance to use again."
+        },
+        "3": {
+          "description":"Check number of calls to methods in Point when calling size() on an n-point tour.",
+          "hint":"The student should not be calling any methods in Point, as they are merely determining the number of points in the tour. This likely fails due to some other runtime error (null pointer etc.)"
+        },
+        "4": {
+          "description":"Check number of calls to methods in Point when calling length() on an n-point tour.",
+          "hint":"Likely off by one from the reference solution if not handling the beginning/end as elegantly as possible."
+        },
+        "5": {
+          "description":"Check number of calls to methods in Point when calling draw() on an n-point tour.",
+          "hint":"Most likely draws the first line segment twice (off by one) as a result of using a do-while loop and not handling endpoints as elegantly as possible."
+        },
+        "6": {
+          "description":"Check number of calls to methods in Point when calling toString() on an n-point tour.",
+          "hint":"Similar to the previous test, likely an off by one error resulting from the do-while loop."
+        },
+        "7": {
+          "description":"Time insertNearest().",
+          "hint":"It appears that several submissions failed due to the test, probably related to recomputing distance more than necessary. (See timing test 1)"
+        },
+        "8": {
+          "description":"Time insertSmallest().",
+          "hint":"Possibly fails due to using two loops to iterate the tour twice, or recomputing values instead of storing them. Otherwise, may fail if the method fails to run (see correctness tests)."
+        },
+        "9": {
+          "description":"Time interleaved calls to insertnearest() and size().",
+          "hint":"General timing test. See the tests above (1 and 3) for more info."
+        },
+        "10": {
+          "description":"Time interleaved calls to insertNearest() and length().",
+          "hint":"General timing test. See the tests above (1 and 4) for more info."
+        },
+        "11": {
+          "description":"Time interleaved calls to insertNearest() and toString().",
+          "hint":"General timing test. See the tests above (1 and 5) for more info."
+        }
+      }
     }
   }
 }
