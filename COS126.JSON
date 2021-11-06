@@ -1091,7 +1091,7 @@
             {
               "test_number": "2a",
               "description":"Check 1-argument freq() method.",
-              "hint":"Checks that the student can correctly return the frequency of a kgram."
+              "hint":"Checks that the freq() method can correctly return the frequency of a kgram."
             },
             {
               "test_number": "2b",
@@ -1176,12 +1176,12 @@
             {
               "test_number": "8a",
               "description":"Check that random() is consistent with freq() for order 2 model.",
-              "hint":"Checks that the student is storing frequencies and calculating probabilities properly based on the frequencies. If this test fails, especially if test 2 does not fail, see the random() method for logical errors."
+              "hint":"Checks that the program is storing frequencies and calculating probabilities properly based on the frequencies. If this test fails, especially if test 2 does not fail, see the random() method for logical errors."
             },
             {
               "test_number": "8b",
               "description":"Check that random() is consistent with freq() for order 0 model.",
-              "hint":"Checks that the student is storing frequencies and calculating probabilities properly based on the frequencies. If this test fails, especially if test 2 does not fail, see the random() method for logical errors."
+              "hint":"Checks that the program is storing frequencies and calculating probabilities properly based on the frequencies. If this test fails, especially if test 2 does not fail, see the random() method for logical errors."
             },
             {
               "test_number": "9",
@@ -1196,7 +1196,7 @@
             {
               "test_number": "11",
               "description":"Call one-argument freq() method with invalid argument.",
-              "hint":"Checks that the student throws exception properly (wrong length kgram)."
+              "hint":"Checks that the freq() method throws exception properly (wrong length kgram)."
             },
             {
               "test_number": "12",
