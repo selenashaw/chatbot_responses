@@ -1,3 +1,116 @@
 {
-  
+  "general": [
+    {
+      "category":"reached end of file while parsing",
+      "response":"It sounds like you are missing a closing curly bracket, '}', somewhere in your code.  Sometimes this can be fixed by placing a curly bracket at the end of your code, however it is also possible that you have a function, if statement, or loop statement that is missing a closing curly bracket."
+    },
+    {
+      "category":"unclosed string literal",
+      "response":"Unclosed string literal means that you have opened a string but you have not closed it, in other words you have an unmatched \" in your code, the line number given by the error message should help you find it!"
+    },
+    {
+      "category":"unclosed character literal",
+      "response":"Unclosed character literal means that you have opened a character but you have not closed it, in other words you have an unmatched ' in your code, the line number given by the error message should help you find it!"
+    },
+    {
+      "category":"';' expected",
+      "response":"Each line of code in Java must end with a semicolon, if you are getting this error then you are forgetting one, the line number the error message gives you should help you find where the semicolon is missing!"
+    },
+    {
+      "category":"')' expected",
+      "response":"This error means that you have an open parenthesis that does not have a closing parenthesis, this could be present in a function declaration, function call, if statement, or loop statement. The line number provided by the error message should help you narrow down where the missing ')' should be in your code."
+    },
+    {
+      "category":"'(' expected",
+      "response":"This error means that you have a closed parenthesis that does not have an open parenthesis, this could be present in a function declaration, function call, if statement, or loop statement. The line number provided by the error message should help you narrow down where the missing '(' should be in your code."
+    },
+    {
+      "category":"class, interface, or enum expected",
+      "response":"This error message is thrown because you have too many '}' at the end of your code. This could be because you accidently added an extra closing curly bracket, but it could also be thrown if you are missing an opening curly bracket, unfortunately the line number isn't very helpful for this error message, so you will have to check all of your functions, loops, and if statements to determine where you are missing a '{'."
+    },
+    {
+      "category":"illegal start of expression",
+      "response":"This error message can be thrown for a number of reasons, it is basically telling you that the compiler found something wrong with your code. Using the line number the error message gave you, check for syntax errors or typos in your code."
+    },
+    {
+      "category":"cannot find symbol",
+      "response":"This error can be thrown for a number of reasons, including if a variable has not been declared, if the program cannot find a function you are calling, or if you have made a typo. Using the line number given by the error message, check your code to see if any of these cases apply."
+    },
+    {
+      "category":"incompatible types",
+      "response":"Incompatible types is an error that can happen for several reasons, including assigning a value to a variable and the value and variable are different types, returning a value in a function of one type but the function is supposed to return a different type, returning a value when the return type of a function is void, or having a return statement that does not return a value but the function declaration states that a value should be returned. Using the line number given by the error message, check your code to see if any of these cases apply."
+    },
+    {
+      "category":"invalid method declaration; return type required",
+      "response":"This error message means that the return type of a function has not been declared. Functions in Java must be declared with their return type, check to see if you forgot to include the return type; if you don't want the function to return anything, use the keyword 'void'."
+    },
+    {
+      "category":"missing return statement",
+      "response":"This error message means that you have a function that is supposed to return a value, but you do not have a return statement for it. It can also be caused if your code has conditionals and it does not return in all of the conditionals."
+    },
+    {
+      "category":"unreachable statement",
+      "response":"This error means that you have lines of code after a return statement that will never be run, which is likely caused by a logic error in which the program returns before it can run lines of code. However, it can also occur if you expect the program to run forever (i.e. you have a while(true) loop) but you have code after the loop that will never be run."
+    },
+    {
+      "category":"'.class' expected",
+      "response":"This error can be received for a few reasons, some of the more common reasons include forgetting to use the 'new' keyword when initializing a data type or incorrectly casting a variable (i.e. casting should be done with '(int)' not 'int'). Use the line of code given in the error message to see if either of these cases apply."
+    },
+    {
+      "category":"array dimension missing",
+      "response":"This error is thrown when an array is declared and the size of the array was not specified. Using a String array as an example, when an array is declared with the form '... = new String[n]', n must be an integer that tells the program how long the array needs to be."
+    },
+    {
+      "category":"java.lang.ArrayIndexOutOfBoundsException",
+      "response":"ArrayIndexOutOfBounds means that you are trying to access a value in an array at an index that does not exist for that array, usually going past the end of the array. Perhaps you have a for loop that is iterating for too long or the array is too small."
+    },
+    {
+      "category":"java.lang.StringIndexOutOfBoundsException",
+      "response":"StringIndexOutOfBounds means that you are trying to index a character in a string that does not exist or that you are trying to take a substring of a string that is not long enough. Remember that string indices start at 0, like arrays. Check to see if you are iterating for too long or if the substring you are trying to get goes past the end of the string."
+    },
+    {
+      "category":"java.lang.NullPointerException",
+      "response":"NullPointerException is an exception that mostly occurs with object-oriented programming, it occurs when the program tries to use an object reference and the object has a null value. This is often the hardest exception to debug as it usually requires some tracing. First check to see you handle cases in which the object you are referring to might be null. If that doesn't help fix your answer the next best step is to use print statements at different points in your code and run it with several test cases to try to isolate which case and which part of code is causing the exception."
+    },
+    {
+     "category":"java.lang.ArrayStoreException",
+     "response":"This exception is thrown when you attempt to store the wrong type into an array of objects, for example, the code 'Object[] arr = new Integer[4]; arr[0]=0.1;' would throw this exception. Perhaps you are creating an object array with the wrong type or you are storing the wrong values in the array." 
+    },
+    {
+      "category":"java.lang.NumberFormatException",
+      "response":"This error is thrown if you are trying to parse a string to a numeric value, but the string does not contain numeric values, this can be caused by spaces, commas, or if the number is too big to fit in the numeric type. Check the string that you are giving to your program and compare it to how you are processing it to see if you are failing to parse a whitespace or comma."
+    }
+  ],
+  "parsed": [
+    {
+      "key":"cannot be applied to given types",
+      "category":"method (method_name) in class (class_name) cannot be applied to given types;",
+      "response":"This error means that you are missing function arguments or are providing the wrong type for function arguments. Double check your use of the function the error message line number directs you to and ensure that you are giving it the correct argument types in the correct order."
+    },
+    {
+      "key":"cannot be dereferenced",
+      "category":"(data_type) cannot be dereferenced",
+      "response":"Data types that are not wrapper classes (recall that 'Integer' is a wrapper class and 'int' is not) do not have functions that can accessed by dereferencing the varaible (i.e. Integer.toString() is fine but int.toString() is not). The line number given by the error message should point you to where the problem is."
+    },
+    {
+      "key":"is already defined in method",
+      "category":"variable (variable_name) is already defined in method (method_name(method_arg_types))",
+      "response":"This error message is telling you that you have a variable that is already defined somewhere else, either in the function header or earlier in the function. It might help to search your code to see where else the variable_name the error mentions is declared."
+    },
+    {
+      "key":"might not have been initialized",
+      "category": "variable (variable_name) might not have been initialized",
+      "response": "This error message is thrown when there is a chance that a variable might not have a value set to it at the time you are trying to access it. This could be caused by forgetting to initialize (i.e. set an initial value to) the variable, or it could be caused by a logic statement in your code, for example, you might be declaring a variable (but not initializing it) and within a conditional statement you give it some value, then later on (outside of the conditional) you are attempting to access that variable. One way to fix this is by initializing the variable to some value, like null, overwritting it in the conditional, then checking if it is null before accessing it."
+    },
+    {
+      "key":"bad operand types for binary operator",
+      "category":"bad operand types for binary operator 'binary_operator'",
+      "response":"This error is thrown if a binary operator is given a bad argument. Binary operators in Java can only be used on numeric variables and chars, you will need some sort of comparison function if you are trying to use it on any other type. Check the types of the arguments you are giving to the binary operator at the line number provided by the error message."
+    },
+    {
+      "key":"cannot be referenced from a static context",
+      "category":"non-static variable (variable_name) cannot be referenced from a static context OR non-static method (method_name(method_args_types)) cannot be referenced from a static context",
+      "response":"This error is thrown when you attempt to access a non-static variable/method from a method that is static. This can be fixed by finding the declaration of the variable or function identified by the error message and adding the 'static' keyword to the declaration."
+    }
+  ]
 }
