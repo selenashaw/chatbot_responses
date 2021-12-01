@@ -34,7 +34,7 @@
     },
     {
       "category":"cannot find symbol",
-      "response":"This error can be thrown for a number of reasons, including if a variable has not been declared, if the program cannot find a function you are calling, or if you have made a typo. Using the line number given by the error message, check your code to see if any of these cases apply."
+      "response":"This error can be thrown for a number of reasons, including if a variable has not been declared, if a variable has been declared out side of the scope that it is referenced in, if the program cannot find a function you are calling, or if you have made a typo. Using the line number given by the error message, check your code to see if any of these cases apply."
     },
     {
       "category":"missing return value",
