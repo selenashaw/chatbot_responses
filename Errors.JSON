@@ -34,7 +34,7 @@
     },
     {
       "category":"cannot find symbol",
-      "response":"This error is thrown because the code does not recognize the variable or funciton at the line specified in the error message. This can happen if a variable has not been declared, if a variable has been declared but cannot be seen by the scope that is referencing it, if the program cannot find a function you are calling, or if you have made a typo."
+      "response":"This error is thrown because the code does not recognize the variable or function at the line specified in the error message. This can happen if a variable has not been declared, if a variable has been declared but cannot be seen by the scope that is referencing it, if the program cannot find a function you are calling, or if you have made a typo."
     },
     {
       "category":"missing return value",
